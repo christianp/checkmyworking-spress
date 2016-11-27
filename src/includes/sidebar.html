@@ -1,0 +1,28 @@
+<nav id="sidebar">
+
+	<ul id="sidebar_one">
+        {% if isFrontPage == false %}
+        <li id="homelink"><a href="{{url('/')}}">Home</a></li>
+        <li id="about"><a href="{{url('/about')}}">About</a></li>
+        {% endif %}
+
+        <li>
+            <h2>Blogroll</h2>
+            <ul class="xoxo blogroll">
+                {% for blog in site.blogroll %}
+                <li><a href="{{blog.url}}">{{blog.name}}</a></li>
+                {% endfor %}
+            </ul>
+        </li>
+		
+		<li id="sidebar_search">
+            <form id="searchform" method="get" action="{{url('/search')}}">
+                <fieldset>
+                    <label for="searchquery">Search</label>
+                    <input type="text" value="" name="q" id="searchquery" />
+                    <input type="submit" class="submit" accesskey="s" value="Go!" />
+                </fieldset>
+            </form>
+		</li>
+	</ul>
+</nav>

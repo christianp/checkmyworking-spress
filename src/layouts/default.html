@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+    <head>
+        {% block head %}
+        {% include "head.html" %}
+        {% endblock %}
+    </head>
+
+    <body id="top">
+        <div id="wrap">
+            <header id="header">
+                <h1><a accesskey="h" href="{{url('/')}}">{{site.title}}</a></h1>
+                <p>{{site.description}}</p>
+            </header>
+
+            <main id="content">
+                {% block content %}
+                    {{page.content}}
+                {% endblock %}
+            </main>
+
+            {% block sidebar %}
+                {% include "sidebar.html" %}
+            {% endblock %}
+
+            <footer id="footer">
+                <p>
+                    &copy; {{ 'now' | date('Y') }} <a href="{{site.author.homepage}}">{{site.author.name}}</a>
+                </p>			
+            </footer>
+        </div>
+
+        {% block javascript %}
+        {% if site.mathjax %}
+            <script type="text/x-mathjax-config">
+                {{site.mathjax.config}}
+            </script>
+            <script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        {% endif %}
+        {% endblock %}
+    </body>
+</html>

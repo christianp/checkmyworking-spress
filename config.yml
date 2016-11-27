@@ -1,0 +1,93 @@
+title: "cp's mathem-o-blog"
+description: "aka CheckMyWorking.com"
+logo: "spresso-logo.png"
+
+# Your site's domain. E.g: http://yoursite.com
+url: ""
+
+no_html_extension: true
+
+parsedown_actived: true
+
+# Comments in posts
+comments:
+    enabled: false
+    disqus_shortname: ""
+
+# Information about author
+author:
+    name: "Christian Lawson-Perfect"
+    homepage: "http://somethingorotherwhatever.com"
+
+    # Social networks
+    twitter: "spress_cms"
+    github: "https://github.com/spress/Spress"
+    bitbucket:
+    facebook:
+    linkedin:
+    gplus:
+    youtube:
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: "/:year/:month/:title"
+
+# RSS feed
+feed:
+    max_item: 10
+
+# Facebook Open Graph
+open_graph:
+    locale: "en_GB"
+
+# Code highlight for <pre> and <code> tags
+# Powered by http://highlightjs.org/
+code_highlight: true
+
+# Site validation
+google_verify:
+bing_verify:
+
+# Page menus
+top_menu:
+    - { name: Home, url: "/" }
+    - { name: About, url: "/about" }
+
+bottom_menu:
+    - { name: "Go to Spresso theme web", url: "https://github.com/yosymfony/Spress-theme-spresso" }
+
+authors:
+    cp:
+        name: "Christian"
+        bio: "CLP is cool"
+
+mathjax:
+    config: |
+        MathJax.Hub.Config({
+          tex2jax: {
+            inlineMath: [['$','$'], ['\\[','\\]']],
+            processEscapes: true
+          },
+         'HTML-CSS': {
+           mtextFontInherit: true,
+           linebreaks: {automatic: true, width: "75% container"},
+           webFont: 'Gyre-Pagella',
+           preferredFont: 'Gyre-Pagella'
+        },
+         TeX: {
+         Macros: { 
+              goodbreak: '\mmlToken{mo}[linebreak="goodbreak"]{}', 
+              badbreak: ['\mmlToken{mo}[linebreak="nobreak"]{#1}',1], 
+              nobreak: ['\mmlToken{mo}[linebreak="nobreak"]{#1}',1], 
+              invisibletimes: ['\mmlToken{mo}{\u2062}'] 
+            } 
+        }
+        });
+
+blogroll:
+    - {name: "The Aperiodical", url: "http://aperiodical.com" }
+    - {name: "Something or other, whatever", url: "http://somethingorotherwhatever.com" }
+
+include: ['.htaccess']

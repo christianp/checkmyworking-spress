@@ -1,0 +1,32 @@
+<div class="post">
+    <h2 id="pagetitle"><a href="{{url(post.url)}}" rel="bookmark">{{post.title}}</a></h2>
+    <div class="postcontent">
+        {% if more %}
+            {{post.content|excerpt}}
+            {% if post.content is with_excerpt %}
+            <a class="more" href="{{url(post.url)}}">{{post.title}} continued »</a>
+            {% endif %}
+        {% else %}
+            {{ post.content|content }}
+        {% endif %}
+    </div>
+    <div class="postmeta">
+        <p>Posted on <time pubdate="pubdate">{{ post.date | date('Y-m-d') }}</time></p>
+        {% if post.real_categories | length > 0 %}
+        <p>
+            Filed in 
+            {% for slug, cat_url in post.terms_url.categories %}
+                {% if slug in post.real_categories %}
+                {% set category = slug | get_category %}
+                <a href="{{url(cat_url)}}">{{category.name}}</a>{% if loop.last == false %},{% endif %}
+                {% endif %}
+            {% endfor %}
+            {% if post.terms_url.tags | length > 0 %}
+            and tagged 
+            {% for tag, tag_url in post.terms_url.tags %}<a href="{{url(tag_url)}}">{{tag}}</a>{% if loop.last == false %},{% endif %}{% endfor %}
+            {% endif %}
+        </p>
+        {% endif %}
+    </div>
+</div>
+

@@ -1,0 +1,332 @@
+/*
+Theme Name: Precious
+Theme URI: http://wordpreciousss.org/themes/precious/
+Description: Precious is a <a href="http://codex.wordpress.org/Theme_Frameworks">theme framework</a> for WordPress <strong>2.8</strong>+. Built with simplicity and web accessibility in mind.
+Version: 4.0.1
+Author: Kristin K. Wangen
+Author URI: http://wordpreciousss.org/
+Tags: white, blue, orange, light, two-columns, flexible-width, right-sidebar, threaded-comments, translation-ready
+
+ * @package WordPreciousss
+ * @subpackage Precious_Parent_Theme
+
+
+*/
+
+body { 
+background:#fcfcfc;
+color:#111;
+font-size:62.5%;
+font-style:normal;
+margin:0;
+padding:0 1em;
+font-family: Verdana, Tahoma, Arial, Sans-serif;
+}
+
+/*some class styling*/
+.sidenote {
+padding:5px;
+border: 1pt solid #ccc;
+float:right;
+}
+.sidequote {
+background:#eee;
+font-style:italic;
+font-family:Georgia, Serif;
+font-size:1.1em;
+padding:5px;
+border: double #ccc;
+border-width:2px 0px;
+float:left;
+margin: 0px;
+margin-right: 10px;
+}
+.border,   hr {
+border: 1pt solid #ccc;
+}
+ .doubleborder {
+border: 5px double #ccc;
+padding: 3px;
+}
+blockquote {
+border-left: 3px solid #369;
+padding-left: 5px;
+}
+
+/*linkcolors for default skin*/
+a:link {
+color : #930; 
+text-decoration : underline; 
+} 
+ a:visited {
+color : #b52; 
+text-decoration : underline; 
+} 
+ a:hover {
+color :#555; 
+text-decoration:underline;
+} 
+ a:active {
+color : #555; 
+} 
+
+/*header styles*/
+h1, h2, h3, h4, h5, h6, #commentbox legend, #searchform label, #wp-calendar caption, #sidebar h2 a {
+font-family :'URW Gothic L', 'Century Gothic', 'Trebuchet MS', Tahoma, Arial, 
+	Verdana, Helvetica, Sans-Serif; 
+color : #333; 
+margin: 10px 0px;
+padding:2px 0px;
+font-weight:normal;
+
+}
+
+
+/*Wrap*/
+#wrap {
+background : transparent;
+padding:0px;
+max-width:80em;
+margin: 0px auto;
+font-size:1.1em;
+}
+
+
+/*Access navigation*/
+#accessnav, #footer, #footer ul {
+margin:0px;
+padding:0px;
+}
+#accessnav li:before {
+content: "\00BB \0020";
+}
+
+ul#accessnav a {
+color:#111;
+text-decoration:none;
+}
+
+
+#footer {
+clear:both;
+}
+
+
+/*header*/
+
+#header {
+background:transparent;
+margin:0px;
+padding:5px 0px 2px;
+text-align:left;
+border-bottom: 1pt solid #ccc;
+}
+#header h1{
+font-size:3em;
+margin:2px 0px;
+}
+#header p {
+margin:2px 0px;
+padding:0px;
+}
+#header h1 a:link, #header h1 a:visited {
+color:#369;
+font-weight:normal;
+text-decoration:none;
+}
+#header h1 a:hover, #header h1 a:active {
+color:#333;
+text-decoration:none;
+}
+
+
+
+/*content div*/
+#content {
+padding: 2px 0px;
+margin: 0px;
+margin-right:0.5em;
+width: 68%;
+float: left;
+font-size:1.1em;
+line-height:1.6em;
+}
+h2#pagetitle, h2#comments{
+color:#369;
+font-weight:normal;
+padding: 10px 0px 3px;
+}
+h2#pagetitle {
+padding:3px 0px;
+}
+
+#content h3.posttitle,  #content h2.posttitle {
+padding:3px 0px;
+border-bottom: 1px solid #eee;
+}
+#content h3.posttitle a {
+font-size:1.2em;
+}
+#content h2.posttitle a {
+font-size:1em;
+}
+
+#content h3 a:link,  #content h3 a:visited, #content h2 a:link,   #content h2 a:visited  {
+color:#369;
+font-weight: normal;
+text-decoration:none;
+}
+#content h2 a:hover, #content h2 a:active,  #content h3 a:hover,  #content h3 a:active {
+color:#333;
+}
+.post {
+margin: 15px 0px 25px;
+clear:both;
+}
+.sticky {
+background:#eee;
+border:1px solid #ccc;
+padding: 10px;
+}
+.postmeta {
+font-size:0.9em;
+clear:both;
+padding: 2px;
+}
+.postmeta p {
+margin:1px 0px;
+padding:0;
+}
+.wp-caption {
+background:#eee;
+border:1px solid #ccc;
+}
+
+/*Comments*/
+#commentbox,  #footer {
+border-top:1px solid #ccc;
+}
+#commentbox ol {
+list-style: none outside;
+}
+#commentlist li {
+background:#fcfcfc;
+border:1px solid #ccc;
+padding: 3px;
+margin: 5px 0px 10px;
+}
+#commentlist li.alt {
+background:#f7f7f9;
+}
+
+#commentlist li.bypostauthor {
+background:#eee;
+
+}
+ul.children {
+list-style:none outside;
+
+}
+ .commentmeta {
+font-size:0.9em;
+text-align:right;
+}
+img.avatar {
+border:1px solid #ccc;
+background:#fcfcfc;
+margin: 5px;
+float:right;
+padding:2px;
+}
+
+
+
+/*sidebar*/
+#sidebar {
+padding: 5px 0px;
+margin: 0 0 0 1.5em;
+width: 25%;
+float:right;
+font-size:1em;
+}
+#sidebar h2, #sidebar label {
+font-size:1.1em;
+margin:5px 0px 2px;
+font-weight: normal;
+}
+#sidebar a {
+text-decoration: none;
+}
+#sidebar ul {
+list-style:none outside;
+padding: 2px 0px;
+margin:2px 0px;
+}
+#sidebar li {
+margin:0px;
+padding: 3px 2px;
+}
+#sidebar li li {
+border-bottom: 1px solid #eee;
+}
+#sidebar li li li:before {
+content: "\00BB \0020";
+}
+
+#sidebar li li li, #sidebar li ul.wp-tag-cloud li  {
+border: none;
+}
+
+
+#sidebar form, #sidebar fieldset {
+margin:0px;
+padding:0px;
+}
+#sidebar label {
+display:block;
+}
+#sidebar input#searchquery, #sidebar input#search-widget{
+width:50%;
+}
+#sidebar input.submit {
+width:20%;
+}
+
+/* Widget styling*/
+ td#today { 
+background:#ccc;
+}
+#wp-calendar caption {
+font-size: 1.1em;
+text-align: left;
+}
+
+/*forms*/
+input , textarea, select, option {
+font-family : Verdana, Arial, Tahoma, Helvetica, Sans-Serif; 
+font-size:1em;
+padding: 2px;
+background:#cde;
+border:1px solid #369;
+color : #111; 
+margin: 2px;
+}
+ fieldset,  legend {
+background:transparent;
+color : #111; 
+border: none;
+padding: 5px;
+}
+ label,  legend {
+font-weight:normal;
+}
+
+/*other styling*/
+#wpfooter {
+text-align: center;
+}
+
+/*and just to make this go through WP Themes directory*/
+.alignright, .alignleft, .aligncenter, .wp-caption { }
+
+

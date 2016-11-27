@@ -1,0 +1,25 @@
+---
+layout: "page"
+list_mode: true
+generator: "taxonomy"
+max_page: 5
+taxonomy_attribute: "categories"
+permalink: "/:name"
+---
+{% set category = page.term|get_category %}
+<div class="page-header">
+    <h1>
+        {% if category.parent %}<small class="parent-category"><a href="/categories/{{category.parent}}">{{category.parent}}</a> »</small>{% endif %}
+        {{ category.name }}
+    </h1>
+</div>
+
+{% if page.list_mode %}
+    {% include "posts-list.html" with { posts: page.pagination.items } %}
+{% else %}
+    {% for post in page.pagination.items %}
+        {% include "post.html" %}
+    {% endfor %}
+{% endif %}
+
+{% include "paginator.html" %}

@@ -1,0 +1,18 @@
+---
+layout: "index"
+title: ""
+
+generator: "pagination"
+provider: "site.posts"
+max_page: 5
+sort_by: "date"
+---
+{% set isFrontPage = true %}
+
+{% for post in page.pagination.items %}
+    {% if not post.draft %}
+        {% include "post.html" with {'more':true}%}
+    {% endif %}
+{% endfor %}
+
+{% include "paginator.html" %}

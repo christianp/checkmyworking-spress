@@ -1,0 +1,167 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "3d51e76e8761a25d8e058f74a30bbe3f",
+    "content-hash": "26e696fb6af29665f067d0e1278d9dc9",
+    "packages": [
+        {
+            "name": "spress/spress-installer",
+            "version": "v2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spress/Spress-installer.git",
+                "reference": "971031b2399ea72dd7fef68b7d413ab0161225c2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spress/Spress-installer/zipball/971031b2399ea72dd7fef68b7d413ab0161225c2",
+                "reference": "971031b2399ea72dd7fef68b7d413ab0161225c2",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0"
+            },
+            "replace": {
+                "yosymfony/spress-installer": "self.version"
+            },
+            "require-dev": {
+                "composer/composer": "1.*",
+                "mockery/mockery": "0.9.*"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Yosymfony\\Spress\\Composer\\SpressPlugin",
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Yosymfony\\Spress\\Composer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Victor Puertas",
+                    "email": "vpgugr@gmail.com",
+                    "homepage": "http://yosymfony.com"
+                }
+            ],
+            "description": "Installer for Spress addons",
+            "keywords": [
+                "installer",
+                "plugins",
+                "spress",
+                "themes"
+            ],
+            "time": "2016-01-02 13:24:07"
+        },
+        {
+            "name": "yosymfony/spress-plugin-dataloader",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yosymfony/spress-plugin-dataloader.git",
+                "reference": "a76603de02a5070be7a3014b2d01844fac9394b6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yosymfony/spress-plugin-dataloader/zipball/a76603de02a5070be7a3014b2d01844fac9394b6",
+                "reference": "a76603de02a5070be7a3014b2d01844fac9394b6",
+                "shasum": ""
+            },
+            "require": {
+                "spress/spress-installer": "2.0.*"
+            },
+            "type": "spress-plugin",
+            "extra": {
+                "spress_class": "SpressPlugins\\SpressDataLoader\\SpressDataLoader",
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Victor Puertas",
+                    "email": "vpgugr@gmail.com",
+                    "homepage": "http://yosymfony.com"
+                }
+            ],
+            "description": "Dataloader plugin for Spress",
+            "keywords": [
+                "json",
+                "plugin",
+                "spress"
+            ],
+            "time": "2016-01-02 12:43:51"
+        },
+        {
+            "name": "yosymfony/spress-plugin-more-tag",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yosymfony/Spress-plugin-more-tag.git",
+                "reference": "3924fb184e40ad7e1d32ed22a63e5f686ac272ee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yosymfony/Spress-plugin-more-tag/zipball/3924fb184e40ad7e1d32ed22a63e5f686ac272ee",
+                "reference": "3924fb184e40ad7e1d32ed22a63e5f686ac272ee",
+                "shasum": ""
+            },
+            "require": {
+                "spress/spress-installer": "2.0.*"
+            },
+            "type": "spress-plugin",
+            "extra": {
+                "spress_class": "SpressPlugins\\SpressMoreTag\\SpressMoreTag",
+                "branch-alias": {
+                    "dev-master": "2.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SpressPlugins\\SpressMoreTag\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Victor Puertas",
+                    "email": "vpgugr@gmail.com",
+                    "homepage": "http://yosymfony.com"
+                }
+            ],
+            "description": "More tag for post in Spress sites",
+            "keywords": [
+                "excerpt",
+                "markdown",
+                "plugin",
+                "spress"
+            ],
+            "time": "2016-01-02 12:29:33"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

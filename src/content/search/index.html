@@ -1,0 +1,57 @@
+---
+layout: "default"
+title: "Search"
+---
+{% block head %}
+<style type="text/css">
+    #search-container > .search-bit {
+        display: none;
+    }
+    #search-container.loading #loading-search.search-bit,
+    #search-container.no-results #no-results.search-bit,
+    #search-container.got-results #got-results.search-bit
+    {
+        display: block;
+    }
+    .query {
+        font-style: italic;
+        color: #666;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div id="search-container" class="loading">
+    <div id="loading-search" class="search-bit">
+        <h2 id="pagetitle">Searching...</h2>
+    </div>
+    <div id="no-results" class="search-bit">
+        <h2 id="pagetitle">Nothing found for <span class="query"></span></h2>
+    </div>
+    <div id="got-results" class="search-bit">
+        <h2 id="pagetitle">Search results for <span class="query"></span></h2>
+        <div id="results">
+        </div>
+    </div>
+</div>
+{% endblock content %}
+
+{% block javascript %}
+<script>
+    var content = [
+    {% for post in site.posts %}
+        {
+            draft: {% if post.draft %}true{% else %}false{% endif %}, 
+            url: {{url(post.url)|json_encode}}, 
+            title: {{post.title|json_encode}}, 
+            body: {{post.content|json_encode}}, 
+            excerpt: {{post.content|excerpt|json_encode}},
+            date: {{post.date|json_encode}}
+        }{% if loop.last == false %},{% endif %}
+    {% endfor %}
+    ]
+</script>
+
+<script src="{{url('/assets/js/lunr.js')}}"></script>
+<script src="{{url('/search/search.js')}}"></script>
+{% endblock %}

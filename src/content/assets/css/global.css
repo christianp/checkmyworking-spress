@@ -1,0 +1,322 @@
+/*
+ * @package WordPreciousss
+ * @subpackage Precious_Parent_Theme
+*/
+
+/*	Global css styling
+	==========
+	This stylesheet takes care for some general styling for aligning images and text,
+	together som basic font-sizes, styling for css-classes created by WordPress and form-styling.	
+*/
+
+/* fonts/ text */
+p {
+	font-size : 1em; 
+	font-style : normal; 
+} 
+h1 {
+	font-size:2em;
+}
+h2 {
+	font-size : 1.6em; 
+}
+h3, big {
+	font-size:1.2em;
+}
+h4, h5, h6 {
+	font-size:1em;
+}
+blockquote {
+	font-size:1em;
+}
+em, cite, i, .credits {
+	font-style:italic;
+}
+strong, b, .first {
+font-weight:bold;
+}
+code, pre {
+	font-size:1.1em;
+}
+.gecko code, .gecko pre {
+	font-size:1.2em;
+}
+
+
+small, .small {
+	font-size:0.9em;
+}
+
+/*images*/
+img {
+	max-width:98%;
+	border:0px;
+	margin:2px;
+}
+.wp-smiley, .noborder {
+	border:0px;
+}
+.rssimg {
+	margin:0;
+	border:none;
+}
+img.center, img.aligncenter {
+	display:block;
+	margin: 10px auto;
+}
+.wp-caption {
+	font-size: 0.9em;
+	text-align: center;
+	padding: 2px;
+}
+
+/*CSS classes for aligning images, text etc*/
+.center, .aligncenter {
+	text-align: center;
+}
+.right, .alignright {
+	float: right;
+	margin-left: 10px;
+}
+.left, .alignleft {
+	float: left;
+	margin-right: 10px;
+}
+.righttxt {
+	text-align: right;
+}
+
+/*misc css classes */
+.none {
+	display: none;
+}
+.inline {
+	display:inline;
+}
+.block {
+	display:block;
+}
+.sidequote, .sidenote {
+	width: 130px;
+}
+.spoiler {
+	background:#222;
+	color:#202020;
+}
+.spoiler:hover {
+	color:#fff;
+}
+
+/*Access navigation found on top in Precious Theme*/
+#accessnav {
+	clear:both;
+}
+#accessnav li{
+	display:inline;
+}
+#accessnav li ul {
+	display:inline;
+}
+#accessnav select,  #accessnav option{
+	padding:1px;
+	margin:0px;
+}
+#accessnav form {
+	display:inline;
+}
+
+/*navbar support*/
+#nav {
+	margin:2px 0;
+	padding:2px 0;
+	clear:both;
+	}
+#nav ul {
+	margin:0;
+	padding:0;
+	}
+#nav li {
+	display:inline;
+	margin: 0px 0px 0px 7px;
+	}
+
+
+
+/*content*/
+.postmeta {
+	font-size:0.9em;
+	clear:both;
+}
+.postmeta p {
+	margin:2px 0px;
+	padding:0;
+}
+
+
+
+
+/*Pagetemplate styling*/
+ul#bookmarks {
+	list-style:none outside;
+	margin:5px 0px;
+	padding:2px;
+}
+
+/*Tag cloud styling*/
+ul.wp-tag-cloud {
+	list-style:none;
+}
+.wp-tag-cloud li {
+	display:inline;
+	margin: 3px 5px;
+}
+
+
+/*Comments*/
+#respond {
+	clear:both;
+}
+
+#commentform legend {
+	margin-left: -5px;
+	font-size:1.2em;
+}
+#commentform fieldset {
+	padding:0;
+	margin:0;
+	border:none;
+}
+#commentform textarea {
+	width:90%;
+}
+#commentform label, #commentform textarea {
+	display:block;
+}
+#commentform input {
+	width:50%;
+}
+#commentform input.submit {
+	width:40%;
+	margin:2px 0px;
+}
+ol#commentlist, ol#pinglist {
+	list-style-position:inside;
+	margin: 5px 0px;
+}
+#commentlist li, #pinglist li {
+	margin: 7px 0px;
+	clear:both;
+}
+cite.comment_author {
+	font-style:normal;
+	display:inline;
+}
+
+
+/*next and previous navigation */
+ul#footernav, ul#commentsnav, ul.page-numbers {
+	list-style:none;
+	margin:5px 0px;
+	padding:0;
+	clear:both;
+	font-size:0.9em;
+}
+ul#footernav li, ul#commentsnav li, ul.page-numbers li {
+	margin:0;
+	padding:0;
+	display:inline;
+}
+li.prev {
+	float:left;
+}
+li.next {
+	float:right;
+}
+li#toplink {
+	display:block;
+}
+
+
+/*general sidebar settings*/
+#sidebar ul {
+	list-style:none;
+}
+
+/* Widget styling*/
+.rsswidget img {
+	margin: 0px 2px;
+}
+.textwidget {
+	margin:0px;
+	padding: 2px;
+}
+
+#wp-calendar {
+	margin: 2px 0px;
+	width: 80%;
+}
+#wp-calendar th, #wp-calendar td {
+	padding:0.1em;
+	margin:0;
+	text-align:center;
+}
+
+
+/*footer*/
+#footer {
+	clear:both;
+}
+
+
+/*general lists*/
+ul, ol {
+	list-style-position: outside;
+	margin: 5px 20px;
+	padding:2px;
+}
+li {
+	margin: 2px 0px;
+}
+dl {
+	margin: 5px 0px;
+	padding:2px;
+}
+dt {
+	margin: 5px 0px;
+}
+dd {
+	margin: 5px 15px;
+}
+
+/*forms*/
+input , textarea, select, option {
+	font-size:100%;
+	padding: 2px 0px;
+	margin: 2px 0px;
+}
+fieldset, legend {
+	border: none;
+	padding: 5px;
+}
+label, legend {
+	font-weight:normal;
+}
+
+
+/*tables*/
+table {
+	width: 90%;
+	margin: 5px auto;
+	padding: 0px;
+}
+caption {
+	font-weight: bold;
+	padding: 5px;
+}
+td, th, tr {
+	padding: 5px;
+	text-align:left;
+}
+
+
+

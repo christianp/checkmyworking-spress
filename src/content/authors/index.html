@@ -1,0 +1,24 @@
+---
+layout: "page"
+list_mode: true
+generator: "taxonomy"
+max_page: 5
+taxonomy_attribute: "authors"
+permalink: "/:name"
+---
+{% set author = page.term|get_author %}
+<div class="page-header">
+    <h1>{{ author.display_name }}</h1>
+    <img src="{{author.avatar}}">
+    <p>{{author.bio}}</p>
+</div>
+
+{% if page.list_mode %}
+    {% include "posts-list.html" with { posts: page.pagination.items } %}
+{% else %}
+    {% for post in page.pagination.items %}
+        {% include "post.html" %}
+    {% endfor %}
+{% endif %}
+
+{% include "paginator.html" %}
