@@ -1,0 +1,16 @@
+{
+    "name": "christianp/categorynames",
+    "type": "spress-plugin",
+    "description": "Show category names as they were originally",
+    "keywords": ["spress", "plugin"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christian Lawson-Perfect",
+            "email": "christianperfect@gmail.com"
+        }
+    ],
+    "require": {
+        "spress/spress-installer": "2.0.*"
+    }
+}

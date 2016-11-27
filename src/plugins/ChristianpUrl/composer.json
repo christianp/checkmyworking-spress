@@ -1,0 +1,16 @@
+{
+    "name": "christianp/url",
+    "type": "spress-plugin",
+    "description": "Add a url() function which appends site.url to the given url",
+    "keywords": ["spress", "plugin"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christian Lawson-Perfect",
+            "email": "christianperfect@gmail.com"
+        }
+    ],
+    "require": {
+        "spress/spress-installer": "2.0.*"
+    }
+}

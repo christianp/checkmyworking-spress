@@ -1,0 +1,16 @@
+{
+    "name": "christianp/authors",
+    "type": "spress-plugin",
+    "description": "Data about authors",
+    "keywords": ["spress", "plugin"],
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Christian Lawson-Perfect",
+            "email": "christianperfect@gmail.com"
+        }
+    ],
+    "require": {
+        "spress/spress-installer": "2.0.*"
+    }
+}
