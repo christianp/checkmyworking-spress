@@ -25,8 +25,62 @@
             and tagged 
             {% for tag, tag_url in post.terms_url.tags %}<a href="{{url(tag_url)}}">{{tag}}</a>{% if loop.last == false %},{% endif %}{% endfor %}
             {% endif %}
+			{% if more and post.comments|length > 0 %}
+			| <a href="{{url(post.url)}}#commentbox">{% if post.comments|length == 1 %}1 reply{% else %}{{post.comments|length}} replies{% endif %}</a>
+			{% endif %}
         </p>
         {% endif %}
     </div>
 </div>
 
+<div id="commentbox">
+	{% if not more and post.comments|length > 0 %}
+	<h3>{% if post.comments|length == 1 %}1 reply{% else %}{{post.comments|length}} replies{% endif %}</h3>
+	<ol id="commentlist">
+		{% for comment in post.comments %}
+		<li id="comment-{{comment.id}}" class="comment {% if loop.index0 is even %}even{% else %}odd alt{% endif %}">
+			<cite class="comment_author">{{comment.author}}</cite> wrote:
+			<div class="comment_text">
+				{{comment.content}}
+			</div>
+			<p class="commentmeta">
+				<a href="#comment-{{comment.id}}" title="Permalink to this comment">{{comment.date}}</a>
+			</p>
+		</li>
+		{% endfor %}
+	</ol>
+<!--
+	<div id="respond">
+		<form action="http://checkmyworking.com/wp-comments-post.php" method="post" id="commentform">
+			<fieldset>
+				<legend id="reply">Leave a reply</legend>
+				<div class="cancel-comment-reply">
+					<a rel="nofollow" id="cancel-comment-reply-link" href="/2013/09/a-bookmarklet-to-replace-wordpress-coms-image-based-maths-with-mathjax/#respond" style="display:none;">Cancel reply</a></div>
+				<p>You are logged in as <a href="http://checkmyworking.com/wp-admin/profile.php">
+					Christian Perfect</a>. 
+				<a href="http://checkmyworking.com/wp-login.php?action=logout">Logout</a></p>
+				<label for="comment">Your comment</label>
+				<textarea name="comment" id="comment" cols="40" rows="10" tabindex="4" class="writemaths tex2jax_ignore"></textarea>
+				<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="0464630e17"></p><input type="hidden" id="_wp_unfiltered_html_comment_disabled" name="_wp_unfiltered_html_comment" value="e6edbe61a5"><script>(function(){if(window===window.parent){document.getElementById('_wp_unfiltered_html_comment_disabled').name='_wp_unfiltered_html_comment';}})();</script>
+				<p class="comment-subscription-form"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments">Notify me of follow-up comments by email.</label></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;"> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">Notify me of new posts by email.</label></p><p style="display: none;"></p>
+				<input name="submit" type="submit" id="submit" tabindex="6" value="Submit">
+				<input type="hidden" name="comment_post_ID" value="1094" id="comment_post_ID">
+				<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+			</fieldset>
+			<input type="hidden" id="ak_js" name="ak_js" value="1480321697479"></form>
+	</div>
+-->
+	{% endif %}
+
+	{% if not more and post.pings|length > 0 %}
+	<h3>Trackbacks/Pingbacks</h3>
+	<ol id="pinglist">
+		{% for comment in post.pings%}
+		<li id="comment-{{comment.id}}" class="pingback">
+			<span class="pingtype">{% if comment.type == 'pingback' %}Pingback{% else %}Trackback{% endif %} from </span>
+			<span class="pinglink"><a href="{{comment.author_url}}" rel="external nofollow" class="url">{{comment.author}}</a></span>
+		</li>
+		{% endfor %}
+	</ol>
+</div>
+{% endif %}
