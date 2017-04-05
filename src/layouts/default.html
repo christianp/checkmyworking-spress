@@ -35,11 +35,12 @@
             <script type="text/x-mathjax-config">
                 {{site.mathjax.config}}
             </script>
-            <script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
         {% endif %}
         {% endblock %}
 
 		{% block bottom_includes %}
 		{% include "bottom.html" %}
+		{% endblock bottom_includes %}
     </body>
 </html>
